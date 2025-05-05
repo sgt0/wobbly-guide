@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html" class="active">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html" class="active">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/postprocessing.html">Post-processing</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -187,21 +187,17 @@ Make sure you unpack it in a place where you’re sure it won’t be moved from 
 An easy place to put it is in your Documents directory.</p>
 <h2 id="downloading-a-pre-release-version"><a class="header" href="#downloading-a-pre-release-version">Downloading a pre-release version</a></h2>
 <p>If the most recent release is not up to date with the master branch,
-then you might want to consider downloading from the <a href="https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/actions">actions page</a>.
-You can get the latest snapshot by going to the <em>Actions</em> tab,
-clicking on the latest workflow,
-and then click on the <em>Wobbly-win64</em> link under <em>Artifacts</em>.
-If the artifacts link has not expired yet, it will start downloading the latest snapshot.
-Be aware that you need to be logged in on GitHub to download artifacts.</p>
+then you might want to consider downloading the <a href="https://nightly.link/Jaded-Encoding-Thaumaturgy/Wobbly/workflows/windows/master/Wobbly-win64.zip">latest master build</a>.
+If the build has not expired yet, it will start downloading the latest snapshot.</p>
 <p><img src="imgs/wobbly_artifact.png" alt="A Wobbly artifact" /></p>
 <h2 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h2>
 <p>Wobbly has the following dependencies:</p>
 <ul>
+<li><a href="https://github.com/vapoursynth/bestsource">BestSource</a> (optional, input dependent)</li>
 <li><a href="https://github.com/dwbuiten/d2vsource">d2vsource</a> (optional, input dependent)</li>
 <li><a href="https://www.rationalqm.us/dgdecnv/dgdecnv.html">DGDecNV</a> (optional, input dependent)</li>
 <li><a href="https://github.com/vapoursynth/dmetrics">DMetrics</a></li>
 <li><a href="https://github.com/dubhater/vapoursynth-fieldhint">FieldHint</a></li>
-<li><a href="https://github.com/AkarinVS/L-SMASH-Works">L-SMASH-Works</a> (optional, input dependent, through Akarin)</li>
 <li><a href="https://github.com/dubhater/vapoursynth-scxvid">SCXVID</a></li>
 <li><a href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod">TDeintMod</a></li>
 <li><a href="https://github.com/vapoursynth/vivtc">vivtc</a></li>

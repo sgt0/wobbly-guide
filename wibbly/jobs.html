@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html" class="active">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html" class="active">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/postprocessing.html">Post-processing</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -217,33 +217,18 @@ we first need to drag a video file into the jobs window.</p>
 <p><img src="imgs/first_job.png" alt="Simple job" /></p>
 <p>Wibbly accepts the following inputs:</p>
 <ul>
-<li>Common video formats L-SMASH-Works can read (such as m2ts, mkv, etc.)</li>
-<li>DGIndexNV indexing files</li>
-<li>d2v indexing files</li>
+<li>Common video formats BestSource can read (such as m2ts, mkv, etc.)</li>
+<li>dgi index files</li>
+<li>d2v index files</li>
 </ul>
-<p>For most DVDs,
-it’s highly recommended you use DGIndexNV.
-This will consistently be the most accurate,
-and also allow you to easily disable soft telecining if necessary.
-DGIndeNV requires an NVidia GPU,
-so if you don’t have one,
-you can use D2vWitch.
-How to use either program is outside of the scope of this guide.</p>
-<p>For Blu-ray files,
-DGIndexNV will still give you the most accurate results.
-However, you can also opt to use L-SMASH-Works instead,
-though this is not recommended as L-SMASH-Works returns inaccurate results on interlaced content.
-It will use L-SMASH-Works by default if you drag an m2ts or mkv file
-into the jobs window.</p>
+<p>Note that, if you use BestSource, your source file must be remuxed to MKV format.</p>
 <p>Take note!
-If DGIndexNV reports that your source is (almost) 100% FILM,
+If DGIndex reports that your source is (almost) 100% FILM,
 you do not want to use Wobbly on it!
 <em>FILM</em> denotes how much of the indexed clip is <em>soft-telecined</em>.
 If the entire clip is FILM,
 there is no reason to perform any IVTC on it
-and instead you should simply ignore the flag.
-You can do this by loading the index file in your script using <code>dgdecodenv.DGSource</code>
-and passing the following argument: <code>fieldop=1</code>.</p>
+and instead you should simply ignore the flag.</p>
 <h2 id="gathering-metrics"><a class="header" href="#gathering-metrics">Gathering Metrics</a></h2>
 <p>Once you’ve indexed a video file,
 the video will show in the Video Output window.</p>

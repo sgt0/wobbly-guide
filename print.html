@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../index.html">About</a></li><li class="chapter-item expanded "><a href="gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="privacy-policy.html">Privacy Policy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../index.html">About</a></li><li class="chapter-item expanded "><a href="gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="wobbly/postprocessing.html">Post-processing</a></li><li class="chapter-item expanded "><a href="wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="privacy-policy.html">Privacy Policy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -195,17 +195,17 @@ or you can browse the page index on the left.</p>
 <p>The project is <a href="https://github.com/Jaded-Encoding-Thaumaturgy/wobbly-guide">hosted on Github</a>.</p>
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h2>
 <p>New to Wobbly or IVTC/Deinterlacing in general?
-Check out our <a href=".././src/gettingstarted/primer.html">quick primer</a> to get a basic understanding
+Check out our <a href="https://wobbly.encode.moe/gettingstarted/primer.html">quick primer</a> to get a basic understanding
 of the relevant topic and theories.</p>
 <h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
 <p>Spot a typo or problem with the guide?
 Want to contribute to Wobbly?
-Check the <a href=".././src/development/CONTRIBUTING.html">contribute</a> section!</p>
+Check the <a href="https://wobbly.encode.moe/development/CONTRIBUTING.html">contribute</a> section!</p>
 <h2 id="disclaimers"><a class="header" href="#disclaimers">Disclaimers</a></h2>
 <p>This guide may not always be entirely up-to-date with what newer commits offer.
 Programs may be in constant development,
 so if something is outdated or you find any errors in this book,
-please <a href=".././src/development/contact.html">contact us</a>!</p>
+please <a href="https://github.com/Jaded-Encoding-Thaumaturgy/wobbly-guide/issues">contact us</a>!</p>
 <p>This is neither a Vapoursynth nor a filtering guide.
 This book explains how to use a Vapoursynth tool,
 but figuring out how to make use of the output is up to you.</p>
@@ -249,7 +249,7 @@ you get frames A, B, C, and D.
 When telecining,
 the fields of these frames will often alternate like so:</p>
 <p>$$
-\frac{A - A - B -  B -  B -  C -  C -  D - D - D}{2 - 3 - 2 -3}
+\frac{A^1 - A^2 - B^1 -  B^2 -  B^1 -  C^2 -  C^1 -  D^2 - D^1 - D^2}{2 - 3 - 2 -3}
 $$</p>
 <p>This telecining operation is called <em>3:2 pulldown</em>,
 and is the most common form of telecining there is for anime.</p>
@@ -420,21 +420,17 @@ Make sure you unpack it in a place where you’re sure it won’t be moved from 
 An easy place to put it is in your Documents directory.</p>
 <h2 id="downloading-a-pre-release-version"><a class="header" href="#downloading-a-pre-release-version">Downloading a pre-release version</a></h2>
 <p>If the most recent release is not up to date with the master branch,
-then you might want to consider downloading from the <a href="https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/actions">actions page</a>.
-You can get the latest snapshot by going to the <em>Actions</em> tab,
-clicking on the latest workflow,
-and then click on the <em>Wobbly-win64</em> link under <em>Artifacts</em>.
-If the artifacts link has not expired yet, it will start downloading the latest snapshot.
-Be aware that you need to be logged in on GitHub to download artifacts.</p>
+then you might want to consider downloading the <a href="https://nightly.link/Jaded-Encoding-Thaumaturgy/Wobbly/workflows/windows/master/Wobbly-win64.zip">latest master build</a>.
+If the build has not expired yet, it will start downloading the latest snapshot.</p>
 <p><img src="gettingstarted/imgs/wobbly_artifact.png" alt="A Wobbly artifact" /></p>
 <h2 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h2>
 <p>Wobbly has the following dependencies:</p>
 <ul>
+<li><a href="https://github.com/vapoursynth/bestsource">BestSource</a> (optional, input dependent)</li>
 <li><a href="https://github.com/dwbuiten/d2vsource">d2vsource</a> (optional, input dependent)</li>
 <li><a href="https://www.rationalqm.us/dgdecnv/dgdecnv.html">DGDecNV</a> (optional, input dependent)</li>
 <li><a href="https://github.com/vapoursynth/dmetrics">DMetrics</a></li>
 <li><a href="https://github.com/dubhater/vapoursynth-fieldhint">FieldHint</a></li>
-<li><a href="https://github.com/AkarinVS/L-SMASH-Works">L-SMASH-Works</a> (optional, input dependent, through Akarin)</li>
 <li><a href="https://github.com/dubhater/vapoursynth-scxvid">SCXVID</a></li>
 <li><a href="https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod">TDeintMod</a></li>
 <li><a href="https://github.com/vapoursynth/vivtc">vivtc</a></li>
@@ -482,33 +478,18 @@ we first need to drag a video file into the jobs window.</p>
 <p><img src="wibbly/imgs/first_job.png" alt="Simple job" /></p>
 <p>Wibbly accepts the following inputs:</p>
 <ul>
-<li>Common video formats L-SMASH-Works can read (such as m2ts, mkv, etc.)</li>
-<li>DGIndexNV indexing files</li>
-<li>d2v indexing files</li>
+<li>Common video formats BestSource can read (such as m2ts, mkv, etc.)</li>
+<li>dgi index files</li>
+<li>d2v index files</li>
 </ul>
-<p>For most DVDs,
-it’s highly recommended you use DGIndexNV.
-This will consistently be the most accurate,
-and also allow you to easily disable soft telecining if necessary.
-DGIndeNV requires an NVidia GPU,
-so if you don’t have one,
-you can use D2vWitch.
-How to use either program is outside of the scope of this guide.</p>
-<p>For Blu-ray files,
-DGIndexNV will still give you the most accurate results.
-However, you can also opt to use L-SMASH-Works instead,
-though this is not recommended as L-SMASH-Works returns inaccurate results on interlaced content.
-It will use L-SMASH-Works by default if you drag an m2ts or mkv file
-into the jobs window.</p>
+<p>Note that, if you use BestSource, your source file must be remuxed to MKV format.</p>
 <p>Take note!
-If DGIndexNV reports that your source is (almost) 100% FILM,
+If DGIndex reports that your source is (almost) 100% FILM,
 you do not want to use Wobbly on it!
 <em>FILM</em> denotes how much of the indexed clip is <em>soft-telecined</em>.
 If the entire clip is FILM,
 there is no reason to perform any IVTC on it
-and instead you should simply ignore the flag.
-You can do this by loading the index file in your script using <code>dgdecodenv.DGSource</code>
-and passing the following argument: <code>fieldop=1</code>.</p>
+and instead you should simply ignore the flag.</p>
 <h2 id="gathering-metrics"><a class="header" href="#gathering-metrics">Gathering Metrics</a></h2>
 <p>Once you’ve indexed a video file,
 the video will show in the Video Output window.</p>
@@ -912,6 +893,22 @@ that captures just the fade.
 Wobbly may be able to accurately decimate that for you.
 If the pattern remains the same,
 there is no reason to do this.</p>
+<h2 id="scenes-that-are-likely-to-silently-fail"><a class="header" href="#scenes-that-are-likely-to-silently-fail">Scenes that are likely to silently fail</a></h2>
+<p>Wobbly is reliant on the metrics it is fed,
+and those metrics do not always perform well in scenes
+with low-contrast combing or with a very slow pan/zoom.
+An example of the former scene is a scene with rain and no other animation.
+Depending on what pattern guessing method you used,
+Wobbly may not mark these types of scenes as having an ambiguous pattern,
+meaning that they will fail silently and you will not know
+that there is a problem that you need to fix.
+These scenes also usually cannot be caught by looking at combed frames,
+high-mic frames, or frames with high dmetrics.
+There is no solution to this other than to pay close
+attention to those types of scenes when you are QCing your encode.
+You need to understand the metrics being used
+and use that knowledge to predict failure.
+Looking at the metrics in the overlay can assist your understanding.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fixing-framerate-failures"><a class="header" href="#fixing-framerate-failures">Fixing Framerate Failures</a></h1>
 <p>A list of useful keybinds for this section:</p>
 <div class="table-wrapper"><table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
@@ -994,6 +991,116 @@ once you restore enough frames.</p>
 you should have a list of 29.97 frame/s scenes
 you manually and knowingly set this way.</p>
 <p><img src="wobbly/imgs/framerates_fixed.png" alt="Framerates fixed" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="post-processing-fieldmatched-frames"><a class="header" href="#post-processing-fieldmatched-frames">Post-processing fieldmatched frames</a></h1>
+<p>Fundamentally,
+the point of IVTC is to paste two fields together
+and get a full frame out of them.
+However,
+even if you do the pasting correctly,
+the output frame might still have combing artifacts.
+This can happen if one field is brighter than another
+due to a fade to/from white applied to the telecined footage.
+It can also happen during a crossfade
+where one field is further progressed in the fade than the other.</p>
+<p><img src="wobbly/imgs/example_of_interlaced_fade.png" alt="Example of interlaced fade" /></p>
+<p><img src="wobbly/imgs/example_of_crossfade.png" alt="Example of a crossfade" /></p>
+<p>We can use vs-deinterlace’s <code>fix_interlaced_fades</code> and <code>vinverse</code>,
+respectively,
+to solve these two common problems.¹
+Here are two image comparisons which show the respective fixes:
+<a href="https://slow.pics/c/wVFUpLi5">one</a>,
+<a href="https://slow.pics/c/2lDZ2Jo3">two</a>.</p>
+<p>You can see that the vinverse fix is imperfect
+(there is ringing and other gunk on the eyebrow).</p>
+<p>This guide will explain how to tell wobbly
+to apply these fixes to specific ranges of frames.</p>
+<h2 id="setting-up-and-using-custom-lists-in-wobbly"><a class="header" href="#setting-up-and-using-custom-lists-in-wobbly">Setting up and using custom lists in wobbly</a></h2>
+<p>We can use the custom lists feature in wobbly
+to mark ranges that should be handled with vinverse or fix_interlaced_fades.
+Setting up custom lists is complicated,
+but you only have to go through the process once.</p>
+<ol>
+<li>
+<p>Set up presets</p>
+<p>We need to set up “presets” in wobbly,
+which are basically vapoursynth functions
+that we want wobbly to apply to certain ranges.</p>
+<p>For example,
+I can open the preset window,
+click new,
+name the preset “vinverse,”
+and put <code>clip = vinverse(clip)</code> in the body.
+Or I can name the preset “black”
+and put <code>clip = fix_interlaced_fades.Darken(clip, colors=[0, 0, 0], planes=[0, 1, 2])</code>
+in the body—this would be for fades to/from black.
+Note that the usage of <code>clip</code> is important;
+you cannot use another variable name.
+Every project probably needs a preset for white fades,
+for black fades,
+and for vinverse
+(for completion’s sake,
+the preset for fades to/from white could be
+<code>clip = fix_interlaced_fades.Brighten(clip, colors=[1, 0, 0], planes=[0, 1, 2])</code>).</p>
+<p>Obviously,
+something like <code>vinverse(clip)</code> will error out
+if you do not import the vinverse function.
+You can do this in the same window you write the script.
+If you prefer to reduce the amount of imports in your script,
+you can also import the function in your own script instead.</p>
+<p><img src="wobbly/imgs/preset_vinverse_import_example.png" alt="Example of importing a function in a preset" /></p>
+</li>
+<li>
+<p>Create custom lists</p>
+<p>We need to create custom lists
+that correspond to each preset.
+You can do this by opening the custom lists window
+and clicking “new.”
+Each custom list needs to be set as “Post field match” or “Post decimate.”</p>
+</li>
+<li>
+<p>Match each preset to its corresponding custom list</p>
+<p>In the custom lists window,
+there is a dropdown on the left
+that will contain all your presets.
+Highlight each custom list
+and use the dropdown to assign the relevant preset to each list.</p>
+</li>
+<li>
+<p>Select the appropriate custom list</p>
+<p>There is a hotkey to cycle through the custom lists.
+It is <code>x</code> by default.
+You can see the currently selected custom list in the bottom right.</p>
+</li>
+<li>
+<p>Set the range and save it to the custom list</p>
+<p>The hotkey to start a custom list is <code>e</code> by default,
+and the hotkey to end the range and save it to the list is <code>c</code>.
+You can set a range “backwards”
+(press <code>e</code> on the last frame and then press <code>c</code> on the first frame).</p>
+</li>
+</ol>
+<p>Steps 1-3 take a fair amount of time,
+but we can skip them.
+When you’ve used wibbly to make a list of wobbly projects,
+you can do steps 1-3 on the first one
+and then immediately navigate to the rest of the projects
+and use <code>Project &gt; Import from project</code> to copy the information over
+(but make sure you remove any frame ranges you have set first,
+as it copies those over too).
+Or,
+since the project files are in plaintext,
+you can use a text editor to copy the relevant information
+and transfer it to new project files.
+Do this at your own risk,
+since a mispaste will corrupt the project file.</p>
+<p>¹Note: Vinverse is <em>not</em> an adequate solution for crossfades
+where the fields in one part of the fade are not properly matched,
+like so:</p>
+<p><img src="wobbly/imgs/crossfade_improperly_matched.png" alt="Example of improperly matched crossfade" /></p>
+<p>Using vinverse is dangerous in general.
+It can be destructive,
+and so turning it on in the middle of a scene
+can create a jarring change from one frame to the next.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="making-use-of-the-wobbly-output"><a class="header" href="#making-use-of-the-wobbly-output">Making Use of the Wobbly Output</a></h1>
 <p>There are two straightforward ways to make use of the clip you’ve just fixed up in Wobbly.</p>
 <h2 id="from-wobbly-itself"><a class="header" href="#from-wobbly-itself">From Wobbly Itself</a></h2>
@@ -1004,6 +1111,19 @@ next to the Wobbly JSON file.</p>
 <p><img src="wobbly/imgs/save_script.png" alt="Dropdown Options" /></p>
 <p><img src="wobbly/imgs/generated_script.png" alt="Generated Script" /></p>
 <p>You can simply stick the contents of this script into your own script and work from there.</p>
+<p>Make sure you set the Field Based property to “Progressive” after you’ve imported the script!
+This can be done using either of these functions:</p>
+<h3 id="using-stdlib"><a class="header" href="#using-stdlib">Using stdlib</a></h3>
+<pre><code class="language-py">src = src.std.SetFieldBased(0)
+</code></pre>
+<h3 id="using-vstools"><a class="header" href="#using-vstools">Using vstools</a></h3>
+<pre><code class="language-py">from vstools import FieldBased
+
+src = FieldBased.PROGRESSIVE.apply(src)
+</code></pre>
+<h2 id="using-vs-wobbly"><a class="header" href="#using-vs-wobbly">Using vs-wobbly</a></h2>
+<p>TODO</p>
+<h2 id="timecodes"><a class="header" href="#timecodes">Timecodes</a></h2>
 <p>Wobbly can also output a timecode file.
 This should be muxed into the final container alongside your video
 to make sure it properly displays VFR content.

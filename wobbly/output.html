@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html" class="active">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/postprocessing.html">Post-processing</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html" class="active">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -190,6 +190,19 @@ next to the Wobbly JSON file.</p>
 <p><img src="imgs/save_script.png" alt="Dropdown Options" /></p>
 <p><img src="imgs/generated_script.png" alt="Generated Script" /></p>
 <p>You can simply stick the contents of this script into your own script and work from there.</p>
+<p>Make sure you set the Field Based property to “Progressive” after you’ve imported the script!
+This can be done using either of these functions:</p>
+<h3 id="using-stdlib"><a class="header" href="#using-stdlib">Using stdlib</a></h3>
+<pre><code class="language-py">src = src.std.SetFieldBased(0)
+</code></pre>
+<h3 id="using-vstools"><a class="header" href="#using-vstools">Using vstools</a></h3>
+<pre><code class="language-py">from vstools import FieldBased
+
+src = FieldBased.PROGRESSIVE.apply(src)
+</code></pre>
+<h2 id="using-vs-wobbly"><a class="header" href="#using-vs-wobbly">Using vs-wobbly</a></h2>
+<p>TODO</p>
+<h2 id="timecodes"><a class="header" href="#timecodes">Timecodes</a></h2>
 <p>Wobbly can also output a timecode file.
 This should be muxed into the final container alongside your video
 to make sure it properly displays VFR content.
@@ -200,7 +213,7 @@ you can skip that so long as you mark the framerate correctly during encoding.</
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../wobbly/framerates.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../wobbly/postprocessing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -214,7 +227,7 @@ you can skip that so long as you mark the framerate correctly during encoding.</
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../wobbly/framerates.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../wobbly/postprocessing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

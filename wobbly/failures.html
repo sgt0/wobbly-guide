@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html" class="active">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Getting started</li><li class="chapter-item expanded "><a href="../../index.html">About</a></li><li class="chapter-item expanded "><a href="../gettingstarted/primer.html">Telecining</a></li><li class="chapter-item expanded "><a href="../gettingstarted/limitations.html">Limitations</a></li><li class="chapter-item expanded "><a href="../gettingstarted/installation.html">Installation</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wibbly</li><li class="chapter-item expanded "><a href="../wibbly/jobs.html">First steps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Wobbly</li><li class="chapter-item expanded "><a href="../wobbly/starting.html">Starting Your Project</a></li><li class="chapter-item expanded "><a href="../wobbly/failures.html" class="active">Fixing Failures</a></li><li class="chapter-item expanded "><a href="../wobbly/framerates.html">Fixing Framerates</a></li><li class="chapter-item expanded "><a href="../wobbly/postprocessing.html">Post-processing</a></li><li class="chapter-item expanded "><a href="../wobbly/output.html">Using the Output</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../development/CONTRIBUTING.html">Contributing to the Guide</a></li><li class="chapter-item expanded affix "><a href="../impressum.html">Impressum</a></li><li class="chapter-item expanded affix "><a href="../privacy-policy.html">Privacy Policy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -281,6 +281,22 @@ that captures just the fade.
 Wobbly may be able to accurately decimate that for you.
 If the pattern remains the same,
 there is no reason to do this.</p>
+<h2 id="scenes-that-are-likely-to-silently-fail"><a class="header" href="#scenes-that-are-likely-to-silently-fail">Scenes that are likely to silently fail</a></h2>
+<p>Wobbly is reliant on the metrics it is fed,
+and those metrics do not always perform well in scenes
+with low-contrast combing or with a very slow pan/zoom.
+An example of the former scene is a scene with rain and no other animation.
+Depending on what pattern guessing method you used,
+Wobbly may not mark these types of scenes as having an ambiguous pattern,
+meaning that they will fail silently and you will not know
+that there is a problem that you need to fix.
+These scenes also usually cannot be caught by looking at combed frames,
+high-mic frames, or frames with high dmetrics.
+There is no solution to this other than to pay close
+attention to those types of scenes when you are QCing your encode.
+You need to understand the metrics being used
+and use that knowledge to predict failure.
+Looking at the metrics in the overlay can assist your understanding.</p>
 
                     </main>
 
